@@ -29,10 +29,10 @@ var LinkedList = function() {
     var currentHead = list.head;
     list.head = list.head.next;
 
-    return currentHead.value();
-
+    return currentHead.value;
 
   };
+
   list.contains = function(target) {
 
   };

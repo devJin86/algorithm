@@ -23,6 +23,14 @@ describe('linkedList', function() {
     expect(linkedList.tail.value).to.equal(5);
   });
 
+  it('should remove the head from the list when removeHead is called', function() {
+    linkedList.addToTail(4);
+    linkedList.addToTail(5);
+    expect(linkedList.head.value).to.equal(4);
+    linkedList.removeHead();
+    expect(linkedList.head.value).to.equal(5);
+  });
+
 
 
 });
