@@ -3,7 +3,7 @@ var LinkedList = function() {
   list.head = null;
   list.tail = null;
 
-  list.addToTail = function(val) {
+  list.addToTail = function(value) {
     var _newTail = Node(value);
 
     if(!list.head) {
@@ -21,6 +21,16 @@ var LinkedList = function() {
   };
 
   list.removeHead = function() {
+    //check for Head if null return null
+    if(list.head === null) {
+      return null;
+    }
+
+    var currentHead = list.head;
+    list.head = list.head.next;
+
+    return currentHead.value();
+
 
   };
   list.contains = function(target) {
