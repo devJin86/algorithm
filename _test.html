@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Mocha Tests</title>
+    <link rel="stylesheet" href="./libs/mocha/mocha.css" />
+    <script src="./libs/jquery/jquery.js"></script>
+    <script src="./libs/mocha/mocha.js"></script>
+    <script src="./libs/chai/chai.js"></script>
+    <script src="./libs/underscore/underscore.js"></script>
+    <script>
+      mocha.setup('bdd');
+      window.expect = chai.expect;
+      $(function() {
+        window.mochaPhantomJS ? mochaPhantomJS.run() : mocha.run();
+      })
+    </script>
+
+    <!-- source files -->
+    <script type="text/javascript" src="./linkedList.js"></script>
+
+
+
+    <!-- spec files -->
+    <script type="text/javascript" src="spec/linkedListSpec.js"></script>
+
+  </head>
+  <body>
+    <div id="mocha"></div>
+  </body>
+</html>
